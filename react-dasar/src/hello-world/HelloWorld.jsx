@@ -3,15 +3,22 @@ import React from "react";
 export default function HelloWorld() {
   return (
     <div>
-      <HeaderHelloWorld />
+      <HeaderHelloWorld props={{ text: "Hello World" }} />
+      <TextHelloworld />
       <ParagraphHelloWorld />
     </div>
   );
 }
 
-function HeaderHelloWorld() {
+//# contoh props yang tidak di destructuring
+function HeaderHelloWorld({ props }) {
   const text = "Hello World";
-  return <h1 style={{ color: "red" }}>{text.toUpperCase()}</h1>;
+  return <h1 style={{ color: "red" }}>{props.text.toUpperCase()}</h1>;
+}
+
+//# contoh props yang langsung di destructuring
+function TextHelloworld({ text = "Default Text" }) {
+  return <h1 style={{ color: "blue" }}>{text.toUpperCase()}</h1>;
 }
 
 function ParagraphHelloWorld() {
