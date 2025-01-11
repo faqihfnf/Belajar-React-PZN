@@ -1,4 +1,5 @@
 import React from "react";
+import "./HelloWorls.css";
 
 export default function HelloWorld() {
   const props = {
@@ -22,12 +23,12 @@ function HeaderHelloWorld({ props }) {
 
 //# contoh props yang langsung di destructuring
 function TextHelloworld({ text = "Default Text" }) {
-  return <h1 style={{ color: "blue" }}>{text.toUpperCase()}</h1>;
+  return <h1 className="title">{text.toUpperCase()}</h1>;
 }
 
 function ParagraphHelloWorld() {
   const text = "Selamat belajar react dasar";
-  return <p>{text.toLowerCase()}</p>;
+  return <p className="content">{text.toLowerCase()}</p>;
 }
 
 function SpreadHelloWorld({ text = "Default Text" }) {
