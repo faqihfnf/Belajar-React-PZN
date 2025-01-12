@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AlertButton({ text, message }) {
   function handleClick(e) {
-    console.info(e.target);
+    console.info(e);
     alert(message);
   }
   return (
