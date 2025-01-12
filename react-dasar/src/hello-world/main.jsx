@@ -7,6 +7,8 @@ import Table from "../table/Table.jsx";
 import AlertButton from "../button/AlertButton.jsx";
 import MyButton from "../button/MyButton.jsx";
 import SayHelloForm from "../form/SayHelloForm.jsx";
+import SayHelloFormState from "../form/SayHelloFormState.jsx";
+import Counter from "../form/Counter.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,6 +20,8 @@ createRoot(document.getElementById("root")).render(
       <MyButton text={"My Button"} onSmash={() => alert("You smash my button")} />
 
       <SayHelloForm />
+      <Counter />
+      <SayHelloFormState />
     </Container>
   </StrictMode>
 );
