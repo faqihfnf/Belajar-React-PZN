@@ -10,7 +10,7 @@ export default function Note({ note, onChange, onDelete }) {
       ...note,
       text: e.target.value,
     };
-    onchange(newNote);
+    onChange(newNote);
   }
 
   if (isEditing) {
