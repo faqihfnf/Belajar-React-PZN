@@ -17,14 +17,17 @@ export default function ProductList() {
 
   useEffect(() => {
     console.log("mounted");
-    if (loaded) {
-      fetch("/product.json")
-        .then((res) => res.json())
-        .then((data) => setProducts(data));
+    async function fetchProduct() {
+      const response = await fetch("/product.json");
+      const data = await response.json();
+      setProducts(data);
     }
-    // return () => {
-    //   console.log("unmounted");
-    // };
+    if (loaded) {
+      fetchProduct();
+    }
+    return () => {
+      console.log("unmounted");
+    };
   }, [loaded]);
 
   return (
