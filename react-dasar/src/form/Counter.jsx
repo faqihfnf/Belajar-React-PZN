@@ -13,7 +13,7 @@ export default function Counter() {
       <div>
         <button onClick={handleClick}>Increment</button>
       </div>
-      //# nilai counter yang sudah diubah akan ditampilkan
+      {/*nilai counter yang sudah diubah akan ditampilkan  */}
       <h1>Counter: {counter}</h1>
     </div>
   );
