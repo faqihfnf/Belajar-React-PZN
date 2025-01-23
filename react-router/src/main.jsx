@@ -9,6 +9,7 @@ import Product from "./Product.jsx";
 import Customer from "./Customer.jsx";
 import Seller from "./Seller.jsx";
 import Data from "./Data.jsx";
+import DataLayout from "./DataLayout.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,7 +18,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         {/* Nested Route */}
-        <Route path="/data">
+        <Route path="/data" element={<DataLayout />}>
           <Route index element={<Data />} />
           {/* routenya adalah = /data/product */}
           <Route path="product" element={<Product />} />
