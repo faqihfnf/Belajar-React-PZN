@@ -13,6 +13,7 @@ import DataLayout from "./DataLayout.jsx";
 import ProductDetail from "./ProductDetail.jsx";
 import Image from "./Image.jsx";
 import NotFoundPage from "./NotFoundPage.jsx";
+import ProductSearch from "./ProductSearch.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById("root")).render(
           <Route index element={<Data />} />
           {/* routenya adalah = /data/product */}
           <Route path="product" element={<Product />} />
+          <Route path="product/search" element={<ProductSearch />} />
           <Route path="product/:id" element={<ProductDetail />} />
           <Route path="customer" element={<Customer />} />
           <Route path="seller" element={<Seller />} />
