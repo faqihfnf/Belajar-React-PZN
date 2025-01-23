@@ -5,6 +5,9 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./Home.jsx";
 import About from "./About.jsx";
+import Product from "./Product.jsx";
+import Customer from "./Customer.jsx";
+import Seller from "./Seller.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -12,6 +15,13 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        {/* Nested Route */}
+        <Route path="/data">
+          {/* routenya adalah = /data/product */}
+          <Route path="product" element={<Product />} />
+          <Route path="customer" element={<Customer />} />
+          <Route path="seller" element={<Seller />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
