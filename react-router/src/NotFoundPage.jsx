@@ -1,0 +1,10 @@
+import React from "react";
+
+export default function NotFoundPage() {
+  return (
+    <div>
+      <h1>NotFoundPage</h1>
+      <p>Ini adalah halaman NotFoundPage</p>
+    </div>
+  );
+}

@@ -11,6 +11,8 @@ import Seller from "./Seller.jsx";
 import Data from "./Data.jsx";
 import DataLayout from "./DataLayout.jsx";
 import ProductDetail from "./ProductDetail.jsx";
+import Image from "./Image.jsx";
+import NotFoundPage from "./NotFoundPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,6 +20,7 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/image/*" element={<Image />} />
         {/* Nested Route */}
         <Route path="/data" element={<DataLayout />}>
           <Route index element={<Data />} />
@@ -27,6 +30,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="customer" element={<Customer />} />
           <Route path="seller" element={<Seller />} />
         </Route>
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
