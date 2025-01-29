@@ -19,8 +19,18 @@ export const counterSlice = createSlice({
       }
     },
   },
+  selectors: {
+    getDoubleCounter: (state) => {
+      return state * 2;
+    },
+    getCounter: (state, value) => {
+      return state * value;
+    },
+  },
 });
 
 // increment & decrement adalah action yang  bisa digunakan untuk merubah state
 
 export const { increment, decrement } = counterSlice.actions;
+
+export const { getDoubleCounter, getCounter } = counterSlice.selectors;
